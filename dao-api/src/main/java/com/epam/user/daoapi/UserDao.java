@@ -1,4 +1,4 @@
-package com.epam.user.user.daoapi;
+package com.epam.user.daoapi;
 
 import com.epam.user.User;
 

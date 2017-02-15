@@ -1,8 +1,7 @@
-package com.epam.user;
+package com.epam.user.daoapi;
 
 
 import com.epam.user.User;
-import com.epam.user.user.daoapi.UserDao;
 
 import java.util.List;
 
