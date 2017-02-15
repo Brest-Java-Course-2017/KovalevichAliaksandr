@@ -1,6 +1,5 @@
-package com.epam.user.model;
+package com.epam.user;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,27 +30,27 @@ public class UserTest {
     @Test
     public void getUserId() throws Exception {
         user.setUserId(10);
-        Assert.assertEquals(10L, user.getUserId(), 0);
+        assertEquals(10L, user.getUserId(), 0);
 
     }
 
     @Test
     public void getLogin() throws Exception {
         user.setLogin(login);
-        Assert.assertEquals(login, user.getLogin());
+        assertEquals(login, user.getLogin());
 
     }
 
     @Test
     public void getPassword() throws Exception {
         user.setPassword(password);
-        Assert.assertEquals(password, user.getPassword());
+        assertEquals(password, user.getPassword());
     }
 
 
     @Test
     public void getDescription() throws Exception {
         user.setDescription(description);
-        Assert.assertEquals(description, user.getDescription());
+        assertEquals(description, user.getDescription());
     }
 }

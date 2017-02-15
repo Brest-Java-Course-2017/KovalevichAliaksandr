@@ -1,4 +1,4 @@
-package com.epam.user.model;
+package com.epam.user;
 
 
 import java.util.Objects;
