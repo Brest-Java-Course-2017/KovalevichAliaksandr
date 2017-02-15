@@ -1,11 +1,12 @@
-package com.epam.user.daoapi;
+package com.epam.user.dao;
 
+import com.epam.user.User;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by alex on 15.2.17.
@@ -14,9 +15,16 @@ import static org.junit.Assert.*;
 @ContextConfiguration(locations = {"classpath*:test-spring-dao.xml"})
 public class UserDaoImplTest {
 
+    @Autowired
+    private UserDaoImpl userDao;
+
     @Test
     public void findUserById() throws Exception {
-
+        User user=userDao.findUserByUserId(1L);
+        Assert.assertNotNull(user);
+        Assert.assertEquals("userLogin1",user.getLogin());
+        Assert.assertEquals("userPassword1",user.getPassword());
+        Assert.assertEquals("first user",user.getDescription());
     }
 
     @Test
