@@ -18,6 +18,8 @@ import java.util.List;
  * Created by alex on 15.2.17.
  */
 public class UserDaoImpl implements UserDao {
+    private static final String FIND_USER_BY_ID=
+            "select user_id, login, password, description from app_user where user_id =: user";
 
     private JdbcTemplate jdbcTemplate;
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
